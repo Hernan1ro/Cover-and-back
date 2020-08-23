@@ -16,6 +16,9 @@
 
 .container-game {
   margin: 0 30px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1900px;
 }
 
 .title {
@@ -31,13 +34,23 @@ h2 {
   font-weight: 900;
 }
 
-.cover {
-  border-radius: 5px;
+.card {
+  margin: 10px;
   width: 100px;
   height: 150px;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.cover {
+  border-radius: 5px;
+  width: inherit;
+  height: inherit;
   background-color: white;
-  margin: 30px;
   position: relative;
+  display: none;
+  transform: rotateY(180deg);
 }
 .cover-container {
   background-color: white;
@@ -70,8 +83,8 @@ h2 {
 
 .back {
   border-radius: 5px;
-  width: 100px;
-  height: 150px;
+  width: inherit;
+  height: inherit;
   background: repeating-linear-gradient(
     45deg,
     #cf6160,
@@ -79,9 +92,10 @@ h2 {
     #ee7071 10px,
     #ee7071 20px
   );
-  margin: 30px;
   padding: 5px;
   box-sizing: border-box;
+  transition: 0.3s ease-in-out;
+  transform: rotateY(180deg);
 }
 .back h1 {
   background: transparent;
